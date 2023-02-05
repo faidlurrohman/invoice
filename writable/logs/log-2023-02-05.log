@@ -1,0 +1,202 @@
+ERROR - 2023-02-05 13:46:11 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;cs.name&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 23:    cs.name as customer_ship,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		)
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.payment,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at::date as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			cs.name as customer_ship,
+			ct.name as customer_type,
+			cc.name as customer_code,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		join customer_ship cs on cs.id=j.customer_ship_id
+		join customer_type ct on ct.id=j.customer_type_id
+		join customer_code cc on cc.id=j.customer_code_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no,j.created_at
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 42 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-05 13:46:11 --> pg_query(): Query failed: ERROR:  column &quot;cs.name&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 23:    cs.name as customer_ship,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		)
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.payment,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at::date as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			cs.name as customer_ship,
+			ct.name as customer_type,
+			cc.name as customer_code,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		join customer_ship cs on cs.id=j.customer_ship_id
+		join customer_type ct on ct.id=j.customer_type_id
+		join customer_code cc on cc.id=j.customer_code_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no,j.created_at
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 42 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-05 13:46:12 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;cs.name&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 23:    cs.name as customer_ship,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		)
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.payment,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at::date as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			cs.name as customer_ship,
+			ct.name as customer_type,
+			cc.name as customer_code,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		join customer_ship cs on cs.id=j.customer_ship_id
+		join customer_type ct on ct.id=j.customer_type_id
+		join customer_code cc on cc.id=j.customer_code_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no,j.created_at
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 42 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-05 13:46:12 --> pg_query(): Query failed: ERROR:  column &quot;cs.name&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 23:    cs.name as customer_ship,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		)
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.payment,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at::date as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			cs.name as customer_ship,
+			ct.name as customer_type,
+			cc.name as customer_code,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		join customer_ship cs on cs.id=j.customer_ship_id
+		join customer_type ct on ct.id=j.customer_type_id
+		join customer_code cc on cc.id=j.customer_code_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no,j.created_at
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 42 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')

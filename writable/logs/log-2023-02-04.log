@@ -1,0 +1,2540 @@
+ERROR - 2023-02-04 07:05:36 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;jobtype&quot; does not exist
+LINE 2: FROM &quot;jobtype&quot;
+             ^ in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/html/invoice/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#7 /var/www/html/invoice/app/Controllers/JobType.php(20): CodeIgniter\BaseModel->findAll()
+#8 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->index()
+#9 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#13 {main}
+CRITICAL - 2023-02-04 07:05:36 --> pg_query(): Query failed: ERROR:  relation &quot;jobtype&quot; does not exist
+LINE 2: FROM &quot;jobtype&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/JobType.php(20): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->index()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 07:26:29 --> Declaration of App\Models\JobModel::findAll() should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/JobModel.php on line 44.
+ 1 APPPATH/Models/JobModel.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Models/JobModel.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 APPPATH/Controllers/Job.php(19): spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 07:26:58 --> Declaration of App\Models\JobModel::findAll($limit, $offset) should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/JobModel.php on line 44.
+ 1 APPPATH/Models/JobModel.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Models/JobModel.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 APPPATH/Controllers/Job.php(19): spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 07:27:00 --> Declaration of App\Models\JobModel::findAll($limit, $offset) should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/JobModel.php on line 44.
+ 1 APPPATH/Models/JobModel.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Models/JobModel.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 APPPATH/Controllers/Job.php(19): spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 07:27:56 --> Undefined variable: db
+in APPPATH/Models/JobModel.php on line 46.
+ 1 APPPATH/Models/JobModel.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 07:28:05 --> Call to undefined method CodeIgniter\Database\Postgre\Result::result_array()
+in APPPATH/Models/JobModel.php on line 47.
+ 1 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:06:57 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:06:57 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:07:22 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:07:22 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:07:22 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:07:22 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:22 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:22 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:24 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:24 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:25 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:25 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:30 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:30 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:30 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:30 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:41 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:41 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 09:08:51 --> ErrorException: pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(20): App\Models\JobModel->getJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 09:08:51 --> pg_query(): Query failed: ERROR:  function public.job_get() does not exist
+LINE 1: SELECT * FROM public.job_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(44): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(20): App\Models\JobModel->getJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 11:53:32 --> Class 'Config\App\Filters\Cors' not found
+in SYSTEMPATH/Filters/Filters.php on line 166.
+ 1 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 2 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 11:53:43 --> Class 'Config\App\Filters\Cors' not found
+in SYSTEMPATH/Filters/Filters.php on line 166.
+ 1 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 2 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 11:53:44 --> Class 'Config\App\Filters\Cors' not found
+in SYSTEMPATH/Filters/Filters.php on line 166.
+ 1 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 2 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:00:17 --> Array to string conversion
+in APPPATH/Models/JobTypeModel.php on line 16.
+ 1 APPPATH/Models/JobTypeModel.php(16): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:00:50 --> Undefined offset: 0
+in APPPATH/Controllers/JobType.php on line 28.
+ 1 APPPATH/Controllers/JobType.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:01:17 --> Undefined variable: name
+in APPPATH/Controllers/JobType.php on line 28.
+ 1 APPPATH/Controllers/JobType.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:22:14 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (9, null, 2023-02-04 19:22:14.72104, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:22:14 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (9, null, 2023-02-04 19:22:14.72104, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:40:17 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, null, 2023-02-04 19:40:17.091736, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:40:17 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, null, 2023-02-04 19:40:17.091736, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:41:03 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, null, 2023-02-04 19:41:03.943656, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:41:03 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, null, 2023-02-04 19:41:03.943656, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:41:06 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, null, 2023-02-04 19:41:06.71902, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:41:06 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, null, 2023-02-04 19:41:06.71902, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:41:14 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (14, null, 2023-02-04 19:41:14.020954, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:41:14 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (14, null, 2023-02-04 19:41:14.020954, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:41:15 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (15, null, 2023-02-04 19:41:15.446651, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:41:15 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (15, null, 2023-02-04 19:41:15.446651, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:42:09 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (16, null, 2023-02-04 19:42:09.866946, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:42:09 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (16, null, 2023-02-04 19:42:09.866946, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:42:22 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (17, null, 2023-02-04 19:42:22.534595, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:42:22 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (17, null, 2023-02-04 19:42:22.534595, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:43:50 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (18, null, 2023-02-04 19:43:50.439548, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:43:50 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (18, null, 2023-02-04 19:43:50.439548, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:44:44 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (19, null, 2023-02-04 19:44:44.078597, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:44:44 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (19, null, 2023-02-04 19:44:44.078597, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:45:09 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (20, null, 2023-02-04 19:45:09.450892, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:45:09 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (20, null, 2023-02-04 19:45:09.450892, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:46:24 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (21, null, 2023-02-04 19:46:24.310199, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:46:24 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (21, null, 2023-02-04 19:46:24.310199, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:46:53 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (22, null, 2023-02-04 19:46:53.187437, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:46:53 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (22, null, 2023-02-04 19:46:53.187437, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:48:32 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (23, null, 2023-02-04 19:48:32.535319, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:48:32 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (23, null, 2023-02-04 19:48:32.535319, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:49:11 --> Object of class CodeIgniter\Database\Postgre\Result could not be converted to string
+in APPPATH/Models/JobTypeModel.php on line 16.
+ 1 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:50:33 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (26, null, 2023-02-04 19:50:33.01268, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:50:33 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (26, null, 2023-02-04 19:50:33.01268, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:51:54 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+in APPPATH/Controllers/JobType.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:52:21 --> Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+in APPPATH/Controllers/JobType.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:53:51 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (27, null, 2023-02-04 19:53:51.811845, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(31): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:53:51 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (27, null, 2023-02-04 19:53:51.811845, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(31): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:55:22 --> Undefined variable: request
+in APPPATH/Controllers/JobType.php on line 26.
+ 1 APPPATH/Controllers/JobType.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 12:55:29 --> Array to string conversion
+in APPPATH/Controllers/JobType.php on line 28.
+ 1 APPPATH/Controllers/JobType.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 12:57:38 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (28, null, 2023-02-04 19:57:38.902436, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(31): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 12:57:38 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (28, null, 2023-02-04 19:57:38.902436, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(31): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 13:00:04 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (30, null, 2023-02-04 20:00:04.893252, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 13:00:04 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (30, null, 2023-02-04 20:00:04.893252, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 13:00:38 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (31, null, 2023-02-04 20:00:38.922447, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 13:00:38 --> pg_query(): Query failed: ERROR:  null value in column &quot;name&quot; violates not-null constraint
+DETAIL:  Failing row contains (31, null, 2023-02-04 20:00:38.922447, null).
+CONTEXT:  SQL statement &quot;insert into job_type (id,name,created_at) 
+		values(
+			default,
+			nullif(in_name,''),
+			now()::timestamptz
+		)&quot;
+PL/pgSQL function job_type_save(text,text) line 7 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(28): App\Models\JobTypeModel->addJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:12 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerCode.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerCode->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:12 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerCode.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerCode->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:12 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:12 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:13 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerCode.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerCode->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:13 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerCode.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerCode->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:14 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:14 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:16 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:11:16 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/CustomerType.php(20): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\CustomerType->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:51:39 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(187): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(557): CodeIgniter\Model->doFind()
+ 4 APPPATH/Controllers/JobType.php(141): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:52:06 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(187): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(557): CodeIgniter\Model->doFind()
+ 4 APPPATH/Controllers/JobType.php(141): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->delete()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 15:52:29 --> Undefined variable: model
+in APPPATH/Controllers/JobType.php on line 41.
+ 1 APPPATH/Controllers/JobType.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->remove()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 15:52:47 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+CONTEXT:  SQL statement &quot;delete from job_type where id=in_id::int&quot;
+PL/pgSQL function job_type_del(text) line 5 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobTypeModel.php(20): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/JobType.php(42): App\Models\JobTypeModel->deleteJobType()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\JobType->remove()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 15:52:47 --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;&quot;
+CONTEXT:  SQL statement &quot;delete from job_type where id=in_id::int&quot;
+PL/pgSQL function job_type_del(text) line 5 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobTypeModel.php(20): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/JobType.php(42): App\Models\JobTypeModel->deleteJobType()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\JobType->remove()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:09:42 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:09:47 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:09:53 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:09:58 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:04 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:10 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:13 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:13 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:15 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:15 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:23 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:23 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 17:10:25 --> Declaration of App\Controllers\JobType::edit() should be compatible with CodeIgniter\RESTful\ResourceController::edit($id = NULL)
+in APPPATH/Controllers/JobType.php on line 39.
+ 1 APPPATH/Controllers/JobType.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(312): include_once('APPPATH/Controllers/JobType.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 6 [internal function]: spl_autoload_call()
+ 7 SYSTEMPATH/CodeIgniter.php(892): class_exists()
+ 8 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 19:03:17 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Job.php(31): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 19:03:41 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Job.php(31): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 19:04:17 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Job.php(31): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:04:33 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;object&quot; is invalid.
+CONTEXT:  JSON data, line 1: [object...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(31): App\Models\JobModel->addJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:04:33 --> pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;object&quot; is invalid.
+CONTEXT:  JSON data, line 1: [object...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(31): App\Models\JobModel->addJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:04:59 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;json_encode&quot; is invalid.
+CONTEXT:  JSON data, line 1: json_encode...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(31): App\Models\JobModel->addJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:04:59 --> pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;json_encode&quot; is invalid.
+CONTEXT:  JSON data, line 1: json_encode...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(31): App\Models\JobModel->addJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:05:22 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;object&quot; is invalid.
+CONTEXT:  JSON data, line 1: [object...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Job.php(31): App\Models\JobModel->addJob()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Job->add()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:05:22 --> pg_query(): Query failed: ERROR:  invalid input syntax for type json
+DETAIL:  Token &quot;object&quot; is invalid.
+CONTEXT:  JSON data, line 1: [object...
+SQL statement &quot;select json_array_elements(in_job_orders::json)&quot;
+PL/pgSQL function job_save(text,text,text,text,text) line 30 at FOR over SELECT rows
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/JobModel.php(15): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Job.php(31): App\Models\JobModel->addJob()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Job->add()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:53:06 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:53:06 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:53:06 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:53:06 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:53:50 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:53:50 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:24 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:24 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:29 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:29 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:29 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:29 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:35 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:35 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:38 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:38 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:54:39 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:54:39 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:55:41 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:55:41 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:55:49 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:55:49 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 19:55:50 --> ErrorException: pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts. in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 19:55:50 --> pg_query(): Query failed: ERROR:  function public.invoice_get() does not exist
+LINE 1: SELECT * FROM public.invoice_get()
+                      ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 20:08:09 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;)&quot;
+LINE 28:  )
+          ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	)
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 34 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 20:08:09 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;)&quot;
+LINE 28:  )
+          ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	)
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 34 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 20:08:09 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;)&quot;
+LINE 28:  )
+          ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	)
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 34 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 20:08:09 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;)&quot;
+LINE 28:  )
+          ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	)
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 34 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 20:11:55 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;j.created_at&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 20:    j.created_at as job_date,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 35 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 20:11:55 --> pg_query(): Query failed: ERROR:  column &quot;j.created_at&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 20:    j.created_at as job_date,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 35 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 20:11:55 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;j.created_at&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 20:    j.created_at as job_date,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 35 at RETURN QUERY in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->index()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 20:11:55 --> pg_query(): Query failed: ERROR:  column &quot;j.created_at&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 20:    j.created_at as job_date,
+            ^
+QUERY:  
+		with jo as (
+			select 
+				jo.id,
+				jo.job_id,
+				jo.job_type_id as type_id,
+				jt.name as job_type,
+				jo.job_cost as cost
+			from job_order jo
+			join job_type jt on jt.id=jo.job_type_id
+		) 
+		select 
+			i.id,
+			i.invoice_no,
+			i.created_at::date as invoice_date,
+			i.bank_id,
+			b.name as bank,
+			i.job_id,
+			j.job_no as job_no,
+			j.created_at as job_date,
+			coalesce(json_agg(jo) filter (where jo.job_id is not null), '[]') as job_orders,
+			i.created_at::date,
+			i.updated_at::date 
+		from invoice i
+		join bank b on b.id=i.bank_id
+		join job j on j.id=i.job_id
+		left join jo on jo.job_id=j.id
+		group by i.id,b.name,j.job_no
+	
+CONTEXT:  PL/pgSQL function invoice_get(text,text,text,integer) line 35 at RETURN QUERY
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(20): App\Models\InvoiceModel->getInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+CRITICAL - 2023-02-04 21:00:45 --> Undefined variable: job_id
+in APPPATH/Controllers/Invoice.php on line 47.
+ 1 APPPATH/Controllers/Invoice.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 21:01:22 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 21:01:22 --> pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 21:01:26 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 21:01:26 --> pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 21:01:33 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 21:01:33 --> pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
+ERROR - 2023-02-04 21:01:46 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement in /var/www/html/invoice/system/Database/Postgre/Connection.php:147
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/invoice/system/Database/Postgre/Connection.php(147): pg_query()
+#2 /var/www/html/invoice/system/Database/BaseConnection.php(691): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/html/invoice/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/html/invoice/app/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/invoice/app/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+#6 /var/www/html/invoice/system/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+#7 /var/www/html/invoice/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/invoice/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/invoice/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/invoice/system/Commands/Server/rewrite.php(47): require_once('/var/www/html/i...')
+#11 {main}
+CRITICAL - 2023-02-04 21:01:46 --> pg_query(): Query failed: ERROR:  column &quot;job_id&quot; of relation &quot;job&quot; does not exist
+LINE 3:    job_id=nullif(in_job_id,'')::int,
+           ^
+QUERY:  update job set 
+			id=nullif(in_id,'')::int4,
+			job_id=nullif(in_job_id,'')::int,
+			bank_id=nullif(in_bank_id,'')::int,
+			payment=nullif(in_payment,'')::int,
+			updated_at=now()::timestamptz
+		where id=in_id::int
+CONTEXT:  PL/pgSQL function invoice_save(text,text,text,text) line 29 at SQL statement
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 APPPATH/Models/InvoiceModel.php(20): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Invoice.php(48): App\Models\InvoiceModel->editInvoice()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Invoice->edit()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('FCPATH/index.php')
