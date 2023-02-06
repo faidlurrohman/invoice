@@ -1,41 +1,56 @@
 import React from "react";
-import { DatabaseOutlined } from "@ant-design/icons";
-import { Link, Outlet } from "react-router-dom";
+import { DatabaseOutlined, AppstoreFilled } from "@ant-design/icons";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Menu } from "antd";
 
 const menus = [
   {
-    title: "Job",
-    link: "job",
+    key: "main_job",
+    icon: <AppstoreFilled />,
+    label: "Job",
+    children: [
+      {
+        key: "job",
+        label: "Job",
+        icon: <DatabaseOutlined />,
+      },
+      {
+        key: "jobtype",
+        label: "Job Type",
+        icon: <DatabaseOutlined />,
+      },
+    ],
+  },
+  {
+    key: "main_customer",
+    icon: <AppstoreFilled />,
+    label: "Customer",
+    children: [
+      {
+        key: "customer",
+        label: "Customer",
+        icon: <DatabaseOutlined />,
+      },
+      {
+        key: "customertype",
+        label: "Customer Type",
+        icon: <DatabaseOutlined />,
+      },
+      {
+        key: "customercode",
+        label: "Customer Code",
+        icon: <DatabaseOutlined />,
+      },
+    ],
+  },
+  {
+    key: "bank",
+    label: "Bank",
     icon: <DatabaseOutlined />,
   },
   {
-    title: "Job Type",
-    link: "jobtype",
-    icon: <DatabaseOutlined />,
-  },
-  {
-    title: "Customer",
-    link: "customer",
-    icon: <DatabaseOutlined />,
-  },
-  {
-    title: "Customer Type",
-    link: "customertype",
-    icon: <DatabaseOutlined />,
-  },
-  {
-    title: "Customer Code",
-    link: "customercode",
-    icon: <DatabaseOutlined />,
-  },
-  {
-    title: "Bank",
-    link: "bank",
-    icon: <DatabaseOutlined />,
-  },
-  {
-    title: "Invoice",
-    link: "invoice",
+    key: "invoice",
+    label: "Invoice",
     icon: <DatabaseOutlined />,
   },
 ];
@@ -43,6 +58,8 @@ const menus = [
 const mainBgColor = "bg-white";
 
 export default function Wrapper() {
+  const navigate = useNavigate();
+
   return (
     <div
       className={`flex md:fixed inset-x-0 z-10`}
@@ -57,19 +74,14 @@ export default function Wrapper() {
           className={`md:py-0 leading-loose w-8/12 md:w-full border-r border-gray-300 flex flex-col bg-white md:${mainBgColor} h-full`}
         >
           <div className="p-5 md:pr-0 flex-grow">
-            <ul>
-              {menus.map((item) => (
-                <li key={item.title} className={`block`}>
-                  <Link
-                    to={item.link}
-                    className="flex items-center text-lg text-black hover:text-blue-400 hover:bg-white px-3 py-2 rounded-full"
-                  >
-                    {item.icon}
-                    <span className="ml-2">{item.title}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Menu
+              mode="inline"
+              items={menus}
+              onClick={({ key }) => {
+                console.log("key", key);
+                navigate(key);
+              }}
+            />
           </div>
         </nav>
       </div>
